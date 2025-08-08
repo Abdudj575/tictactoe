@@ -80,7 +80,7 @@ int main()
             player = 'O';
         }
 
-        printf("%c's move: \n", player);
+        printf("%c's move (row and column from 0 to 2): ", player);
         scanf("%d %d", &row, &col);
         if(board[row][col] == ' ' && row <=2 && col <= 2){
                 board[row][col] = player;
