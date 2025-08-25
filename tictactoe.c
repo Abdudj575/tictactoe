@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 void printBoard(char board[3][3]){
     for(int i = 0; i < 3; i++){
@@ -12,7 +11,7 @@ void printBoard(char board[3][3]){
     printf("\n");
 }
 
-bool checkWin(char board[3][3], char player){
+int checkWin(char board[3][3], char player){
     //check rows
     for(int i = 0; i < 3; i++){
         if(board[i][0] == player && board[i][1] == player && board[i][2] == player){
@@ -40,7 +39,7 @@ bool checkWin(char board[3][3], char player){
     return 0;    
 }
 
-bool checkDraw(char board[3][3]){
+int checkDraw(char board[3][3]){
     for(int r = 0; r < 3; r++){
         for(int c = 0; c < 3; c++){
             if(board[r][c] == ' '){
@@ -67,8 +66,8 @@ int main()
     
     //start the game
     
-    bool gameOver = 0;
-    bool turn = 0;
+    int gameOver = 0;
+    int turn = 0;
     
     
     while(!gameOver){
